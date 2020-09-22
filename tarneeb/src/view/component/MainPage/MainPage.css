@@ -1,0 +1,23 @@
+.MainPage__page {
+  width: 90%;
+  margin: auto;
+  background-color: #fefbd8;
+  height: 90vh;
+}
+.MainPage__page h1 {
+  background-color: #80ced6;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 45px;
+}
+.MainPage__page h1 img {
+  width: 5%;
+  height: 5%;
+}
+
+@media only screen and (max-width: 360px) {
+  .MainPage__page h1 img {
+    width: 20%;
+    height: 20%;
+  }
+}

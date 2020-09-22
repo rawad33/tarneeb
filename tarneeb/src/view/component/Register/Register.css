@@ -1,5 +1,5 @@
 .register__page {
-  width: 90%;
+  width: 96vw;
   margin: auto;
   background-color: #fefbd8;
   height: 90vh;
@@ -21,6 +21,9 @@
   color: white;
   font-family: "Courier New", Courier, monospace;
   font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .register__page form button {
   width: 80%;
@@ -46,6 +49,12 @@
   font-size: 20px;
 }
 @media only screen and (max-width: 360px) {
+  .register__page {
+    width: 90vw;
+    margin: auto;
+    background-color: #fefbd8;
+    height: 90vh;
+  }
   .register__page form {
     display: flex;
     flex-direction: column;

@@ -1,9 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import Login from "./view/component/LogIn/LogIn"
 import Register from "./view/component/Register/Register"
 import MainPage from './view/component/MainPage/MainPage';
+import SideBar from './view/component/SideBar/SideBar'
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,8 +19,8 @@ function App() {
   return (
     <div className="App">
       <Router>
+        <SideBar />
         <div>
-
           <Switch>
             <Route exact={true} path="/" >
               <Login />
