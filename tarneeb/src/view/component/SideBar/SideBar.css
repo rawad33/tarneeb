@@ -18,7 +18,7 @@
 }
 .nav-menu {
   background-color: #80ced6;
-  width: 250px;
+  width: 10%;
   height: 90vh;
   display: flex;
   justify-content: center;
@@ -26,6 +26,7 @@
   top: 0;
   left: -100%;
   transition: 850ms;
+  border-radius: 12px;
 }
 
 .nav-menu.active {
@@ -33,42 +34,45 @@
   transition: 350ms;
 }
 .nav-text {
+  margin-top: 10px;
   display: flex;
   justify-content: start;
   align-items: center;
   padding: 8px 0px 8px 16px;
   list-style: none;
-  height: 60px;
+  height: 80px;
 }
 .nav-text a {
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 40px;
   width: 90%;
   height: 100%;
+  border-radius: 12px;
+  margin-left: 10px;
   display: flex;
   align-content: center;
-  padding: 0 16px;
-  border-radius: 4px;
 }
 .nav-text a:hover {
-  background-color: #1a83ff;
+  background-color: #5fbcc7;
 }
 .nav-menu-item {
   width: 100%;
 }
 .navbar-toggle {
-  background-color: #060b26;
-  width: 100%;
+  background-color: #80ced6;
+  width: 70%;
   height: 80px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 }
 span {
-  margin-left: 16px;
+  margin-left: 13px;
+  font-size: 24px;
+  padding-top: 10px;
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 420px) {
   .navBar {
     background-color: #80ced6;
     height: 51px;
@@ -80,5 +84,50 @@ span {
     margin-left: 8px;
     font-size: 2rem;
     background-color: none;
+  }
+  .nav-menu {
+    background-color: #80ced6;
+    width: 25%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+    border-radius: 12px;
+  }
+  .navbar-toggle {
+    background-color: #80ced6;
+    width: 80%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-text {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 40px;
+  }
+  .nav-text a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    width: 90%;
+    height: 100%;
+    border-radius: 4px;
+    margin-left: 2px;
+    display: flex;
+    align-content: center;
+  }
+  span {
+    margin-left: 4px;
+    font-size: 16px;
+    padding-top: 1px;
   }
 }

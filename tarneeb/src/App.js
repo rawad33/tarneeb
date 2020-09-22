@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './App.css';
 import Login from "./view/component/LogIn/LogIn"
@@ -16,10 +16,13 @@ import {
 
 
 function App() {
+  const [nav, setNav] = useState(true)
   return (
     <div className="App">
       <Router>
+
         <SideBar />
+
         <div>
           <Switch>
             <Route exact={true} path="/" >

@@ -1,3 +1,5 @@
 .App {
   display: flex;
+  background-color: #fefbd8;
+  width: 90vw;
 }

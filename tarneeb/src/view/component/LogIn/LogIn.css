@@ -1,5 +1,5 @@
 .login__page {
-  width: 90%;
+  width: 96vw;
   margin: auto;
   background-color: #fefbd8;
   height: 90vh;
@@ -21,6 +21,9 @@
   color: white;
   font-family: "Courier New", Courier, monospace;
   font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .login__page form button {
   width: 80%;
@@ -37,6 +40,14 @@
 .login__page button:hover {
   cursor: pointer;
 }
+
+.login__page input {
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+  height: 30px;
+  font-size: 20px;
+}
 #registerBtn {
   width: 20%;
   margin: auto;
@@ -47,15 +58,17 @@
   margin-top: 2%;
   color: rgb(253, 251, 251);
   height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.login__page input {
-  width: 90%;
-  margin: auto;
-  margin-top: 3%;
-  height: 30px;
-  font-size: 20px;
-}
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 420px) {
+  .login__page {
+    width: 90vw;
+    margin: auto;
+    background-color: #fefbd8;
+    height: 90vh;
+  }
   .login__page form {
     display: flex;
     flex-direction: column;
@@ -99,5 +112,8 @@
     font-size: 14px;
     margin-top: 4%;
     color: rgb(253, 251, 251);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -48,7 +48,7 @@
   height: 30px;
   font-size: 20px;
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 420px) {
   .register__page {
     width: 90vw;
     margin: auto;

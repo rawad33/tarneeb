@@ -4,7 +4,7 @@ const mongoose = require("mongoose")//DB driver
 const router = express.Router()
 
 const nodemailer = require('nodemailer');
-
+const jwt = require("jsonwebtoken");
 //A simple module to validate an e-mail address
 var validator = require("email-validator");
 const UserSchema = require('../schemas/UserSchema')
@@ -20,6 +20,10 @@ const transporter = nodemailer.createTransport({
 //hashpassword
 const bcrypt = require("bcrypt")
 const saltRounds = 10
+
+let secret = require("../server")
+
+
 
 router.post('/register', (req, res) => {
     const { userEmail, name, imgurl, password } = req.body
@@ -67,7 +71,18 @@ router.post('/logIn', (req, res) => {
             if (checkEmail.length > 0) {
                 const isMatch = await bcrypt.compare(password, checkEmail[0].userInfo.password)
                 if (isMatch) {
-                    console.log("match")
+                    if (checkEmail[0].active == true) {
+                        const token = await jwt.sign({
+                            name: checkEmail[0].userInfo.employeeName,
+                            userName: checkEmail[0].userInfo.employeeEmail,
+                            userPic: checkEmail[0].userInfo.employeePic
+                        },
+                            secret
+                        );
+                        res.cookie("loginToken", token, {
+                            maxAge: 172800000,
+                        });
+                    }
                     res.send({ success: true })
                 } else { res.send({ success: false, error: "Wrong Password" }) }
 

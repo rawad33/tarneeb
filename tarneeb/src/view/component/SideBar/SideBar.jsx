@@ -27,6 +27,7 @@ const SideBar = () => {
                 <AiIcons.AiOutlineClose />
               </Link>
             </li>
+
             {SidebarData.map((item, index) => {
               return (
                 <li key={index} className={item.cNam}>
