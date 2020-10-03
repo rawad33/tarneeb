@@ -1,5 +1,6 @@
 import React from "react";
 import "./MainPage.css";
+
 import logo from "../../img/logo.png";
 
 const MainPage = () => {

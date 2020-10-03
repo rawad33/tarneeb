@@ -20,6 +20,12 @@
 }
 
 @media only screen and (max-width: 420px) {
+  .MainPage__page {
+    width: 89vw;
+    margin: auto;
+    background-color: #fefbd8;
+    height: 100vh;
+  }
   .MainPage__page h1 img {
     width: 14%;
     height: 14%;
