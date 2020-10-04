@@ -51,6 +51,16 @@
   margin-left: 5%;
   color: #80ced6;
 }
+.room__player-table {
+  display: flex;
+}
+.room__player-table #table {
+  width: 45%;
+}
+.room__player-table .room_player {
+  margin: auto;
+}
+
 @media only screen and (max-width: 420px) {
   .tarneeb__page {
     min-width: 89vw;
