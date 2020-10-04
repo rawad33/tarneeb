@@ -1,0 +1,108 @@
+.Games__page {
+  width: 96vw;
+  margin: auto;
+  background-color: #fefbd8;
+  height: 90vh;
+}
+.Games__page h1 {
+  background-color: #80ced6;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Games__page h1 img {
+  width: 2%;
+  height: 2%;
+  margin-left: 3%;
+}
+.categories {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: start;
+  border-radius: 12px;
+  margin-top: 2%;
+}
+.categories__tarneeb {
+  width: 26%;
+  margin: 2%;
+  -webkit-box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.27);
+  box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.27);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.categories__tarneeb:hover {
+  -webkit-box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.53);
+  box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.53);
+}
+.categories__tarneeb h2 {
+  display: flex;
+  justify-content: center;
+  color: #80ced6;
+  font-size: 50px;
+}
+.categories__tarneeb img {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  margin: auto;
+  margin-top: 5%;
+}
+@media only screen and (max-width: 420px) {
+  .Games__page {
+    min-width: 89vw;
+    margin: auto;
+    background-color: #fefbd8;
+    min-height: 100vh;
+  }
+  .Games__page h1 img {
+    width: 14%;
+    height: 14%;
+  }
+  .categories {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start;
+    border-radius: 12px;
+    margin-top: 4%;
+  }
+  .categories__tarneeb {
+    width: 80%;
+    margin-top: 13%;
+    -webkit-box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.27);
+    -moz-box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.27);
+    box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.27);
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .categories__tarneeb:hover {
+    -webkit-box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.53);
+    box-shadow: -9px 10px 15px 3px rgba(0, 0, 0, 0.53);
+  }
+  .categories__tarneeb h2 {
+    display: flex;
+    justify-content: center;
+    color: #80ced6;
+    font-size: 26px;
+  }
+  .categories__tarneeb img {
+    display: flex;
+    justify-content: center;
+    width: 55%;
+    margin: auto;
+    margin-top: 3%;
+  }
+}

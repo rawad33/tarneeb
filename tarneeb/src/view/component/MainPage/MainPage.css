@@ -1,0 +1,64 @@
+.MainPage__page {
+  width: 96vw;
+  margin: auto;
+  background-color: #fefbd8;
+  height: 90vh;
+}
+.MainPage__page h1 {
+  background-color: #80ced6;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MainPage__page h1 img {
+  width: 2%;
+  height: 2%;
+  margin-left: 3%;
+}
+.MainPage__profile {
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 7%;
+}
+.MainPage__profile img {
+  width: 7%;
+  border-radius: 50%;
+  margin: 1%;
+}
+.MainPage__profile h2 {
+  color: #80ced6;
+}
+
+@media only screen and (max-width: 420px) {
+  .MainPage__page {
+    width: 89vw;
+    margin: auto;
+    background-color: #fefbd8;
+    height: 100vh;
+  }
+  .MainPage__page h1 img {
+    width: 14%;
+    height: 14%;
+  }
+  .MainPage__profile {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 17%;
+  }
+  .MainPage__profile img {
+    width: 20%;
+    border-radius: 50%;
+    margin: 1%;
+  }
+  .MainPage__profile h2 {
+    color: #80ced6;
+  }
+}

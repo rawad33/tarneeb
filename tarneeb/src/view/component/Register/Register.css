@@ -1,0 +1,92 @@
+.register__page {
+  width: 96vw;
+  margin: auto;
+  background-color: #fefbd8;
+  height: 90vh;
+}
+.register__page form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+  margin-top: 0%;
+}
+.register__page form label {
+  font-size: 30px;
+  color: black;
+  margin-top: 6%;
+}
+.register__page h1 {
+  background-color: #80ced6;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register__page form button {
+  width: 80%;
+  height: 30px;
+  margin: auto;
+  border-radius: 12px;
+  border: white;
+  font-size: 25px;
+  margin-top: 15%;
+  background-color: #80ced6;
+  color: rgb(253, 251, 251);
+  height: 50px;
+}
+.register__page button:hover {
+  cursor: pointer;
+}
+
+.register__page input {
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+  height: 30px;
+  font-size: 20px;
+}
+@media only screen and (max-width: 420px) {
+  .register__page {
+    width: 90vw;
+    margin: auto;
+    background-color: #fefbd8;
+    height: 90vh;
+  }
+  .register__page form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 30%;
+  }
+  .register__page form label {
+    font-size: 16px;
+    color: black;
+    margin-top: 6%;
+  }
+  .register__page h1 {
+    background-color: #80ced6;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .register__page input {
+    width: 100%;
+    margin: auto;
+    margin-top: 3%;
+    font-size: 13px;
+    height: 17px;
+  }
+  .register__page form button {
+    width: 90%;
+    margin: auto;
+    border-radius: 12px;
+    border: white;
+    font-size: 14px;
+    margin-top: 15%;
+    background-color: #80ced6;
+    color: rgb(253, 251, 251);
+  }
+}
