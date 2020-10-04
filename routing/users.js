@@ -8,7 +8,9 @@ const jwt = require("jsonwebtoken");
 //A simple module to validate an e-mail address
 var validator = require("email-validator");
 const UserSchema = require('../schemas/UserSchema')
+const LogInSchema = require('../schemas/LogInSchema')
 const UserModel = mongoose.model("UserModel", UserSchema);
+const LogInModel = mongoose.model("LogInModel", LogInSchema)
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -47,7 +49,8 @@ router.post('/register', (req, res) => {
                                 password: hashpassword
 
                             },
-                            active: true
+                            active: true,
+                            time: null
                         })
                     res.send({ success: true, error: null })
                 }
@@ -72,6 +75,15 @@ router.post('/logIn', (req, res) => {
                 const isMatch = await bcrypt.compare(password, checkEmail[0].userInfo.password)
                 if (isMatch) {
                     if (checkEmail[0].active == true) {
+                        await LogInModel.insertMany({
+                            id: checkEmail[0]._id,
+                            employeeName: checkEmail[0].userInfo.employeeName,
+                            employeeEmail: checkEmail[0].userInfo.employeeEmail,
+                            employeePic: checkEmail[0].userInfo.employeePic,
+                            status: true,
+                            time: new Date().getTime()
+
+                        })
                         const token = await jwt.sign({
                             name: checkEmail[0].userInfo.employeeName,
                             userName: checkEmail[0].userInfo.employeeEmail,

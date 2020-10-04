@@ -18,6 +18,21 @@
   height: 2%;
   margin-left: 3%;
 }
+.MainPage__profile {
+  width: 80%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 7%;
+}
+.MainPage__profile img {
+  width: 7%;
+  border-radius: 50%;
+  margin: 1%;
+}
+.MainPage__profile h2 {
+  color: #80ced6;
+}
 
 @media only screen and (max-width: 420px) {
   .MainPage__page {
@@ -29,5 +44,21 @@
   .MainPage__page h1 img {
     width: 14%;
     height: 14%;
+  }
+  .MainPage__profile {
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 17%;
+  }
+  .MainPage__profile img {
+    width: 20%;
+    border-radius: 50%;
+    margin: 1%;
+  }
+  .MainPage__profile h2 {
+    color: #80ced6;
   }
 }

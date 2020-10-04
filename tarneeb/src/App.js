@@ -6,6 +6,7 @@ import Register from "./view/component/Register/Register";
 import MainPage from './view/component/MainPage/MainPage';
 import SideBar from './view/component/SideBar/SideBar';
 import Games from './view/component/Games/Games';
+import Tarneeb from './view/component/Tarneeb/Tarneeb';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,6 +14,7 @@ import {
   Link,
   useHistory
 } from "react-router-dom";
+
 
 
 
@@ -33,12 +35,17 @@ function App() {
             <Route path="/register">
               <Register />
             </Route>
-            <Router path="/mainPage">
-              <MainPage />
+
+            <Router path='/tarneeb'>
+              <Tarneeb />
             </Router>
             <Router path='/games'>
               <Games />
             </Router>
+            <Router path="/mainPage">
+              <MainPage />
+            </Router>
+
 
 
           </Switch>

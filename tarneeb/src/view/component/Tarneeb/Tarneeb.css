@@ -1,0 +1,33 @@
+.tarneeb__page {
+  width: 96vw;
+  margin: auto;
+  background-color: #fefbd8;
+  height: 90vh;
+}
+.tarneeb__page h1 {
+  background-color: #80ced6;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tarneeb__page h1 img {
+  width: 2%;
+  height: 2%;
+  margin-left: 3%;
+}
+
+@media only screen and (max-width: 420px) {
+  .tarneeb__page {
+    min-width: 89vw;
+    margin: auto;
+    background-color: #fefbd8;
+    min-height: 100vh;
+  }
+  .tarneeb__page h1 img {
+    width: 14%;
+    height: 14%;
+  }
+}
