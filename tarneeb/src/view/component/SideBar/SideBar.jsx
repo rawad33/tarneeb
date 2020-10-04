@@ -2,16 +2,36 @@ import React, { useState } from "react";
 import "./SideBar.css";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
+import * as BiIcons from "react-icons/bi";
+import Cookies from "js-cookie";
+
+import { Link, useHistory } from "react-router-dom";
 import { SidebarData } from "../SidebarData";
 import { IconContext } from "react-icons";
-const SideBar = () => {
-  const [sidebar, setSidebar] = useState(false);
 
+const SideBar = ({ userName, userEmail }) => {
+  const [sidebar, setSidebar] = useState(false);
+  const history = useHistory();
   const showSidebar = () => {
     setSidebar(!sidebar);
   };
-
+  const handleLogOut = () => {
+    fetch("/api/users/logout", {
+      method: "POST",
+      body: JSON.stringify({ userName, userEmail }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        const { success, error } = data;
+        if (success) {
+          history.replace("/");
+          Cookies.remove("loginToken");
+        }
+      });
+  };
   return (
     <>
       <IconContext.Provider value={{ color: "#fefbd8" }}>
@@ -38,6 +58,10 @@ const SideBar = () => {
                 </li>
               );
             })}
+            <li className="nav-logout" onClick={handleLogOut}>
+              <BiIcons.BiLogOutCircle />
+              <span>L-Out</span>
+            </li>
           </ul>
         </nav>
       </IconContext.Provider>

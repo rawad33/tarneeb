@@ -56,6 +56,21 @@
 .nav-text a:hover {
   background-color: #5fbcc7;
 }
+.nav-logout {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  width: 90%;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-left: 10px;
+  display: flex;
+  align-content: center;
+  padding: 8px 0px 8px 16px;
+}
+.nav-logout:hover {
+  background-color: #5fbcc7;
+}
 .nav-menu-item {
   width: 100%;
 }
@@ -71,6 +86,7 @@ span {
   margin-left: 13px;
   font-size: 24px;
   padding-top: 10px;
+  color: white;
 }
 @media only screen and (max-width: 420px) {
   .navBar {
@@ -129,5 +145,16 @@ span {
     margin-left: 4px;
     font-size: 16px;
     padding-top: 1px;
+  }
+  .nav-logout {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    width: 90%;
+    height: 100%;
+    border-radius: 4px;
+    margin-left: 2px;
+    display: flex;
+    align-content: center;
   }
 }

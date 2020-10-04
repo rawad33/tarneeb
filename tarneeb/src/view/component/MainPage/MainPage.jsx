@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import "./MainPage.css";
-
+import { UserContext } from "../../../App";
 import logo from "../../img/logo.png";
-import Cookies from "js-cookie";
-import jwt from "jsonwebtoken";
-const MainPage = () => {
-  const [userNmae, setUserName] = useState("");
-  const [userPic, setUserPic] = useState("");
-  useEffect(() => {
-    let token = Cookies.get("loginToken");
-    if (token != null) {
-      const decoded = jwt.decode(token);
-      setUserPic(decoded.userPic);
-      setUserName(decoded.name);
-    }
-  }, []);
 
+const MainPage = () => {
+  const {
+    userName,
+    setUserName,
+    userPic,
+    setUserPic,
+    nav,
+    setNav,
+    userEmail,
+    setUserEmail,
+  } = useContext(UserContext);
   return (
     <div className="MainPage__page">
       <h1>
@@ -23,7 +21,7 @@ const MainPage = () => {
       </h1>
       <div className="MainPage__profile">
         <img src={userPic} alt="userPic" />
-        <h2>{userNmae}</h2>
+        <h2>{userName}</h2>
       </div>
     </div>
   );

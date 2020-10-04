@@ -85,6 +85,7 @@ router.post('/logIn', (req, res) => {
 
                         })
                         const token = await jwt.sign({
+
                             name: checkEmail[0].userInfo.employeeName,
                             userName: checkEmail[0].userInfo.employeeEmail,
                             userPic: checkEmail[0].userInfo.employeePic
@@ -105,5 +106,16 @@ router.post('/logIn', (req, res) => {
         res.send({ success: false, error: "Enter Valid Email" })
     }
 })
+
+router.post('/logout', (req, res) => {
+    const { userName, userEmail } = req.body;
+    LogInModel.deleteOne({ 'employeeEmail': userEmail }).then(res.send({ success: true, error: '' }))
+})
+
+router.post('/connectedUsers', (req, res) => {
+    const { userEmail } = req.body
+})
+
+
 
 module.exports = router;
