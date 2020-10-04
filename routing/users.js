@@ -11,13 +11,7 @@ const UserSchema = require('../schemas/UserSchema')
 const LogInSchema = require('../schemas/LogInSchema')
 const UserModel = mongoose.model("UserModel", UserSchema);
 const LogInModel = mongoose.model("LogInModel", LogInSchema)
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'rawawdservicetest@gmail.com',
-        pass: 'SuperSecretPassword' // naturally, replace both with your real credentials or an application-specific password
-    }
-});
+
 
 //hashpassword
 const bcrypt = require("bcrypt")
