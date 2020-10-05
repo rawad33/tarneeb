@@ -4,6 +4,7 @@ import chair from "../../img/chair.png";
 import table from '../../img/badge.png'
 import { UserContext } from "../../../App";
 
+
 const players = [
     { name: 'player 1', pic: chair },
     { name: 'player 2', pic: chair },
@@ -23,7 +24,7 @@ const Tarneeb = () => {
     } = useContext(UserContext);
 
     const [palyer, setPlayer] = useState(players)
-    const [ch, setCh] = useState(chair)
+
 
     useEffect(() => {
 
@@ -80,7 +81,22 @@ const Tarneeb = () => {
                     </div>
 
                 </div>
-                <div className="tarneeb__table"></div>
+                <div className="tarneeb__table">
+                    <div className='table__playerName'>
+                        <span className='playr-col'>
+                            {palyer[0].name}
+                        </span>
+                        <span className='playr-col'>
+                            {palyer[1].name}
+                        </span>
+                        <span className='playr-col'>
+                            {palyer[2].name}
+                        </span>
+                        <span className='playr-col'>
+                            {palyer[3].name}
+                        </span>
+                    </div>
+                </div>
             </div>
         </div >
     )
