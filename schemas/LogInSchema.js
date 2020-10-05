@@ -7,7 +7,7 @@ const LogInSchema = new mongoose.Schema({
     employeeEmail: String,
     employeePic: String,
     status: Boolean,
-    time: String
+    time: Number
 
 
 })

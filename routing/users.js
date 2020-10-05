@@ -108,6 +108,12 @@ router.post('/logout', (req, res) => {
 
 router.post('/connectedUsers', (req, res) => {
     const { userEmail } = req.body
+    let date = new Date().getTime()
+    console.log(date)
+    LogInModel.deleteMany({ 'time': { $lt: date - 36000000 } })
+    LogInModel.find({}).then(async data => {
+        res.send({ success: true, error: '', info: data })
+    })
 })
 
 
